@@ -1,0 +1,44 @@
+        <nav class="navbar navbar-divlooper navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand animated" href="{{ site.baseurl }}/">{{ site.title }}</a>
+                    <span class="navbar-brand-slogan pull-left">{{ site.description }}</span>
+                </div>
+
+                <div class="collapse navbar-collapse pull-right">
+                    <ul class="nav navbar-nav">
+                        {% for page in site.pages %}
+                            {% if page.title %}
+                            <li>
+                                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+                                    {% if page.name == 'about.md' %}<img src="http://www.gravatar.com/avatar/a9b84aba2f73b0257a6d87b2cd6f6d79.jpg?s=256" width="20" height="20" style="margin-right: 8px;" class="img-circle">{% endif %} {{ page.title }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if site.twitter_username %}<li>
+                            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+                                <i class="fa fa-twitter fa-lg"></i> Twitter
+                            </a>
+                        </li>{% endif %}
+                        {% if site.github_username %}<li>
+                            <a href="https://github.com/{{ site.github_username }}" target="_blank">
+                                <i class="fa fa-github fa-lg"></i> Github
+                            </a>
+                        </li>{% endif %}
+                        {% if site.facebook_username %}<li>
+                            <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank">
+                                <i class="fa fa-facebook fa-lg"></i> Facebook
+                            </a>
+                        </li>{% endif %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>

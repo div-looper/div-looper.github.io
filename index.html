@@ -1,0 +1,22 @@
+---
+layout: default
+---
+        <section class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                {% for post in site.posts %}
+                    <div class="post">
+                        <div class="page-header">
+                            <h2>
+                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            </h2>
+                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        </div>
+                        {{ post.excerpt }}
+                    </div><!-- end .post -->
+
+                    <div class="clearfix"></div>
+                {% endfor %}
+                </div><!-- end .col-md-8.col-md-offset-2 -->
+            </div><!-- end .row -->
+    </section>

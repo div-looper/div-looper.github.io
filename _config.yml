@@ -1,0 +1,13 @@
+# Site settings
+title: "Div#Looper"
+email: khaled.attia@googlemail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Things &amp; other things&hellip;
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://div-looper.github.io" # the base hostname & protocol for your site
+twitter_username: khal3d
+github_username:  khal3d
+facebook_username: khal3d
+
+# Build settings
+markdown: kramdown
