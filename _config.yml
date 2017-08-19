@@ -11,3 +11,6 @@ facebook_username: khal3d
 
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-youtube
