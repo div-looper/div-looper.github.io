@@ -13,4 +13,3 @@ facebook_username: khal3d
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-youtube
